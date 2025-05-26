@@ -1,0 +1,287 @@
+/* 基于 https://uicolors.app/generate/4590b5 的配色方案 */
+
+/*
+主要颜色变量定义 (可根据 uicolors.app 上的具体值进行微调):
+Primary-50: #f0f9ff (非常浅的蓝)
+Primary-100: #e0f2fe
+Primary-200: #bae6fd
+Primary-300: #7dd3fc
+Primary-400: #38bdf8
+Primary-500: #0ea5e9 (链接、强调色)
+Primary-600: #0284c7
+Primary-700: #0369a1
+Primary-800: #075985
+Primary-900: #0c4a6e (深色文字、深色背景元素)
+Primary-950: #082f49
+
+Neutral (用于背景、文字、边框等):
+Neutral-50: #f8fafc
+Neutral-100: #f1f5f9 (页面背景、卡片背景)
+Neutral-200: #e2e8f0
+Neutral-300: #cbd5e1 (边框)
+Neutral-400: #94a3b8
+Neutral-500: #64748b (次要文字)
+Neutral-600: #475569
+Neutral-700: #334155 (主要文字)
+Neutral-800: #1e293b
+Neutral-900: #0f172a
+Neutral-950: #020617
+*/
+
+:root,
+:root.theme-blue {
+  /* Blue Theme (Primary-XXX from #4590b5) */
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9; /* Main Accent */
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+  --primary-950: #082f49;
+
+  /* Neutral Colors (mostly consistent across themes, but can be overridden) */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155; /* Main text */
+  --neutral-800: #1e293b; /* Darker text, headings */
+  --neutral-900: #0f172a;
+  --neutral-950: #020617;
+
+  /* Semantic Color Variables - Blue Theme */
+  --background-main: #ffffff;
+  --background-card: linear-gradient(to top left, #ffffff, var(--neutral-50));
+  --background-intro-circle: linear-gradient(to bottom right, var(--primary-50), #ffffff);
+  --background-intro-text-card: linear-gradient(to bottom right, #ffffff, var(--neutral-50));
+  --background-bubble: linear-gradient(to top right, var(--primary-100), var(--primary-50));
+
+  --text-primary: var(--neutral-700);
+  --text-secondary: var(--neutral-500);
+  --text-headings: var(--primary-900);
+  --text-accent: var(--primary-500);
+  --text-bubble: var(--primary-700);
+
+  --border-color-light: var(--primary-200);
+  --border-color-medium: var(--primary-500);
+  --border-color-card: var(--primary-100);
+
+  --shadow-color-soft-rgb: 12, 74, 110; /* From Primary-900 for consistency */
+
+  --navbar-background-initial: var(--primary-50);
+  --navbar-background-scrolled: rgba(240, 249, 255, 0.85); /* Primary-50 with alpha */
+  --navbar-text: var(--primary-800);
+  --accent-color: var(--primary-600);
+
+  --button-border-color: var(--primary-300);
+  --button-text-color: var(--primary-700);
+  --button-hover-background: var(--primary-100);
+  --button-hover-text: var(--primary-800);
+
+  --sidenav-background: var(--primary-900);
+  --sidenav-text: var(--primary-100);
+  --sidenav-hover-background: var(--primary-800);
+  --sidenav-hover-text: var(--neutral-50);
+
+  --icon-placeholder-bg: var(--primary-100);
+  --icon-placeholder-text: var(--primary-700);
+  --icon-chrome-bg: #fbbc05;
+  --icon-eth-bg: #627EEA;
+  --icon-edge-bg: #0078D7;
+  --icon-common-text: white;
+}
+
+:root.theme-orange {
+  /* Orange Theme (Primary-XXX from #ce6c1c) - Approximate mapping */
+  --primary-50: #fff7ed;  /* Approx from orange-50 */
+  --primary-100: #ffedd5; /* Approx from orange-100 */
+  --primary-200: #fed7aa; /* Approx from orange-200 */
+  --primary-300: #fdba74; /* Approx from orange-300 */
+  --primary-400: #fb923c; /* Approx from orange-400 */
+  --primary-500: #f97316; /* Main Accent - Approx from orange-500 */
+  --primary-600: #ea580c; /* Approx from orange-600 */
+  --primary-700: #c2410c; /* Approx from orange-700 */
+  --primary-800: #9a3412; /* Approx from orange-800 */
+  --primary-900: #7c2d12; /* Approx from orange-900 */
+  --primary-950: #431407; /* Approx from orange-950 */
+
+  /* Neutrals can remain same or be adjusted if needed for orange theme */
+
+  /* Semantic Color Variables - Orange Theme */
+  --background-main: #ffffff;
+  --background-card: linear-gradient(to top left, #ffffff, var(--neutral-50));
+  --background-intro-circle: linear-gradient(to bottom right, var(--primary-50), #ffffff);
+  --background-intro-text-card: linear-gradient(to bottom right, #ffffff, var(--neutral-50));
+  --background-bubble: linear-gradient(to top right, var(--primary-100), var(--primary-50));
+  
+  --text-primary: var(--neutral-700);
+  --text-secondary: var(--neutral-500);
+  --text-headings: var(--primary-900);
+  --text-accent: var(--primary-500);
+  --text-bubble: var(--primary-700);
+
+  --border-color-light: var(--primary-200);
+  --border-color-medium: var(--primary-500);
+  --border-color-card: var(--primary-100);
+
+  --shadow-color-soft-rgb: 124, 45, 18; /* From Primary-900 (orange) for consistency */
+
+  --navbar-background-initial: var(--primary-50);
+  --navbar-background-scrolled: rgba(255, 247, 237, 0.85); /* Primary-50 (orange) with alpha */
+  --navbar-text: var(--primary-800);
+  --accent-color: var(--primary-600);
+
+  --button-border-color: var(--primary-300);
+  --button-text-color: var(--primary-700);
+  --button-hover-background: var(--primary-100);
+  --button-hover-text: var(--primary-800);
+
+  --sidenav-background: var(--primary-900);
+  --sidenav-text: var(--primary-100);
+  --sidenav-hover-background: var(--primary-800);
+  --sidenav-hover-text: var(--neutral-50);
+  
+  --icon-placeholder-bg: var(--primary-100);
+  --icon-placeholder-text: var(--primary-700);
+  /* Icon specific colors might remain or also themed if desired */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s; /* Added transition */
+}
+
+/* 添加纹理质感背景示例 - 可以替换或移除 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'); */ /* 示例纹理 */
+  /* opacity: 0.1; */ /* 调整纹理透明度 */
+  z-index: -1; /*确保在内容下方*/
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-headings);
+}
+
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 更新 NavigationBar.vue 中的颜色 */
+.nav-toggle-button {
+  background-color: var(--primary-800) !important; /* Primary-800 */
+  color: white !important;
+}
+
+nav {
+  background-color: var(--primary-900) !important; /* Primary-900 */
+}
+
+nav ul li a {
+  color: var(--primary-100) !important; /* Primary-100 */
+}
+
+nav ul li a:hover {
+  background-color: var(--primary-800) !important; /* Primary-800 */
+}
+
+/* 更新 HomePage.vue 中的颜色 */
+.hero-section {
+  background-color: var(--primary-50) !important; /* Primary-50 */
+  border-bottom-color: var(--primary-100) !important; /* Primary-100 */
+}
+
+.hero-section h1 {
+  color: var(--primary-900) !important; /* Primary-900 */
+}
+
+.hero-section p {
+  color: var(--primary-600) !important; /* Primary-600 */
+}
+
+.introduction-section {
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */ /* 可以调整阴影使其更轻微 */
+  border: 1px solid var(--primary-100); /* Primary-100 for a light border */
+}
+
+.introduction-section h2, .content-cards-section h2 {
+  color: var(--primary-700) !important; /* Primary-700 */
+}
+
+.card {
+  /* background-color: #ffffff; */ /* Replaced by gradient variable */
+  background-image: var(--background-card);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(var(--shadow-color-soft-rgb), 0.1);
+  border: 1px solid var(--border-color-card);
+}
+
+.card h3 {
+  color: var(--neutral-800) !important; /* Keep important if necessary or refactor */
+}
+
+.card p {
+  color: var(--neutral-600) !important;
+}
+
+.card-link {
+  color: var(--text-accent) !important;
+}
+
+
+/* 空白页面的基本样式 */
+.blank-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.blank-page-content h1 {
+    font-size: 2.5em;
+    color: var(--text-headings);
+    margin-bottom: 20px;
+}
+
+.blank-page-content p {
+    font-size: 1.2em;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.blank-page-content .back-link {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--neutral-50); /* Assuming white/light text on accent bg */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.blank-page-content .back-link:hover {
+    background-color: var(--primary-600); /* Darker shade of accent */
+    text-decoration: none;
+} 
