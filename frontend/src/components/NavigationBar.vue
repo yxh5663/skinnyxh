@@ -1,11 +1,14 @@
 <template>
-  <button @click.stop="toggleNav" class="nav-toggle-button-topbar">☰</button>
+  <div class="nav-controls-container">
+    <!-- <a href="/admin/" class="admin-link" target="_blank" title="管理后台">⚙️</a> -->
+    <button @click.stop="toggleNav" class="nav-toggle-button-topbar">☰</button>
+  </div>
   <div v-if="isNavOpen" @click="closeNav" class="nav-overlay"></div>
   <nav :class="{ 'nav-open': isNavOpen }" class="side-navbar-panel" ref="sideNavPanel">
     <ul>
       <li @click="closeNav"><router-link to="/" class="nav-link">首页</router-link></li>
       <li @click="closeNav"><router-link to="/experience" class="nav-link">经历</router-link></li>
-      <li @click="closeNav"><router-link to="/projects" class="nav-link">项目</router-link></li>
+      <li @click="closeNav"><router-link to="/projects" class="nav-link">博客</router-link></li>
       <li @click="closeNav"><router-link to="/message-wall" class="nav-link">其他</router-link></li>
     </ul>
   </nav>
@@ -54,6 +57,36 @@ export default {
 </script>
 
 <style scoped>
+.nav-controls-container {
+  display: flex;
+  align-items: center;
+  /* This container's positioning is likely handled by its parent in App.vue,
+     fitting into the overall top bar layout. */
+}
+
+/* Admin link styles removed
+.admin-link {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-right: 8px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.admin-link:hover {
+  color: var(--accent-color);
+}
+*/
+
 .nav-toggle-button-topbar {
   background: none;
   border: none;

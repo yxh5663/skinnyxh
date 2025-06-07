@@ -4,6 +4,9 @@
       <div class="logo">Skinnyxh</div>
       <div class="welcome-message">欢迎来到yxh的个人网站</div>
       <nav class="top-nav-actions">
+        <a href="/admin/" target="_blank" rel="noopener noreferrer" class="admin-link-button" title="管理员登录">
+          <span>👤</span>
+        </a>
         <button @click="toggleTheme" class="theme-toggle-button">
           <span v-if="currentTheme === 'theme-blue'">☀️</span>
           <span v-else>🌙</span>
@@ -119,17 +122,26 @@ export default {
   /* border: 1px solid var(--primary-100); */ /* 可选：如果需要一个非常浅的轮廓 */
 }
 
+.admin-link-button,
 .theme-toggle-button,
-.nav-toggle-button-topbar {
-  background-color: transparent !important; /* 按钮透明，透出父容器的 --primary-50 背景 */
+.nav-toggle-button-topbar { /* Apply common styles */
+  background-color: transparent !important;
   border: none !important; 
-  color: var(--navbar-text) !important; /* 文字/图标颜色保持不变 */
+  color: var(--navbar-text) !important;
   padding: 8px 12px; 
   border-radius: 0; 
   cursor: pointer;
   font-size: 1.5em;
   transition: color 0.3s, background-color 0.3s;
   line-height: 1; 
+  text-decoration: none; /* For admin-link-button if it's an <a> tag */
+  display: inline-flex; /* To align icon properly */
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-link-button {
+  border-right: 1px solid var(--primary-100); /* 分割线 */
 }
 
 .theme-toggle-button { 
@@ -141,6 +153,7 @@ export default {
     border-left: none !important; 
 }
 
+.admin-link-button:hover,
 .theme-toggle-button:hover,
 .nav-toggle-button-topbar:hover {
   color: var(--accent-color) !important;

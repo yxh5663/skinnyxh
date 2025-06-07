@@ -1,29 +1,45 @@
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
+# Environments
+.venv/
+/backend/.venv/
+env/
+venv/
+ENV/
 
-# Node / Frontend
-frontend/node_modules/
-frontend/dist/
-frontend/coverage/
+# Django
+db.sqlite3
+/backend/db.sqlite3
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# Frontend
+/node_modules/
+/frontend/node_modules/
+/dist/
+/frontend/dist/
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.npm
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.AppleDouble
+.LSOverride
 
 # Python / Backend
-backend/.venv/
-backend/__pycache__/
-backend/*.sqlite3
-backend/*.db
+*.sqlite3
+*.db
 *.pyc
 *.pyo
 *.pyd
 .Python
-env/
-venv/
-ENV/
 pip-log.txt
 pip-delete-this-directory.txt
 .tox
@@ -31,11 +47,3 @@ pip-delete-this-directory.txt
 .hypothesis/
 .pytest_cache/
 instance/ # Flask instance folder
-# Django specific, if db is always in backend/
-backend/db.sqlite3 
-
-# IDE / Editor
-.vscode/
-.idea/
-*.swp
-*~

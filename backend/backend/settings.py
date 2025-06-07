@@ -25,7 +25,13 @@ SECRET_KEY = "django-insecure-v-k%s#w$#_py&)&tsf=0-8)w1+uit15!a2j778+kt$ejo-idy-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8080',  # Vue dev server
+    # 如果您有其他前端部署的源或不同端口，也需要添加
+    # 例如 'https://yourdomain.com'
+]
 
 
 # Application definition
@@ -39,7 +45,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "message_board.apps.MessageBoardConfig",
+    "timeline_logger",
+    "message_api",
+    "message_board",
+    "footprints",
 ]
 
 MIDDLEWARE = [
@@ -78,8 +87,12 @@ WSGI_APPLICATION = "backend.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "footprints_db",
+        "USER": "footprints_user",
+        "PASSWORD": "password",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -137,6 +150,6 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # 如果你的前端需要发送 cookies (例如，用于认证)，可以设置:
-# CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True
 
 # 也可以使用 CORS_ALLOWED_ORIGIN_REGEXES 或 CORS_ALLOW_ALL_ORIGINS = True (不推荐用于生产环境)
